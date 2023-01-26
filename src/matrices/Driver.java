@@ -26,6 +26,8 @@ public class Driver {
         } catch (DimensionesIncompatibles ex) {
             Logger.getLogger(Driver.class.getName()).log(Level.SEVERE, null, ex);
         }
+        //Trasposición de una matriz
+        System.out.println(Matriz.trasponerMatriz(m1));
     }
     
 }

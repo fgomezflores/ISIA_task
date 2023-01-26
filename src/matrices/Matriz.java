@@ -47,6 +47,20 @@ public class Matriz {
         } 
         return matrizResultante; 
     } 
+    
+    //Nuevo procedimiento
+    public static Matriz trasponerMatriz(Matriz a) {         
+        int i, j, filasA, columnasA; 
+        filasA = a.getDimension().width;
+        columnasA = a.getDimension().height;       
+        Matriz matrizResultante = new Matriz(filasA, columnasA, false);        
+        for (i=0; i < filasA; i++) {
+            for (j=0; j < columnasA; j++) {
+              matrizResultante.datos[j][i] = a.datos[i][j];
+            }
+        }
+        return matrizResultante; 
+    } 
 
     //Nuevo procedimiento
     public static Matriz multiplicarDosMatrices(Matriz a, Matriz b) throws DimensionesIncompatibles { 
